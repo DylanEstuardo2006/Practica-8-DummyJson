@@ -37,6 +37,7 @@ function mostrarProductos(productos)
   document.getElementById("products-container").appendChild(contenedorProductos);
 
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   
   cargarProductos();

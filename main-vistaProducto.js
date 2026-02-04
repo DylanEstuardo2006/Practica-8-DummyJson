@@ -22,6 +22,14 @@ function cargarProducto()
  
  precioProducto = productos.price - (productos.discountPercentage * productos.price / 100);
  
+
+  const comentariosHTML = productos.reviews?.map(r => `
+    <p class="practice-description">
+      ⭐ Rating: ${r.rating} <br>
+      💬 Comentario: ${r.comment}
+    </p>
+  `).join("") || "<p>No hay comentarios</p>";
+
 const contenedorProductos = document.createElement('div');
   contenedorProductos.classList.add('practice-card');
   contenedorProductos.innerHTML = 
@@ -52,9 +60,17 @@ const contenedorProductos = document.createElement('div');
      <p class="practice-price">
       Precio descuento:  $${precioProducto.toFixed(2)}
     </p>
-     
+      <p class="practice-description">
+        Commentarios: 
+     </p> 
+          ${comentariosHTML}
+     <br>
+     <p class="practice-description">
+       Rating: ${productos.reviews?.[0]?.rating ?? "Sin rating"}
+  Comentario: ${productos.reviews?.[0]?.comment ?? "Sin comentario"}
+     </p> 
     <button class="btn-buy" onclick="realizarPago()">Comprar ahora</button>
-   
+       
   </div>
   
 

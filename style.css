@@ -108,3 +108,12 @@ h1 {
   border-color: #4f46e5;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
+.section-add
+{
+    
+   display:flex;
+}
+.divs-section 
+{
+   width: 50%;
+}

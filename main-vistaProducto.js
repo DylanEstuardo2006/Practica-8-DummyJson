@@ -9,7 +9,6 @@ function cargarProducto()
   .then(res => res.json())
   .then(data =>{
 
- 
     mostrarProducto(data);
         
     })
